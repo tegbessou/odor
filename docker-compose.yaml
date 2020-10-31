@@ -18,9 +18,7 @@ services:
     links:
       - php
     networks:
-      web:
-        aliases:
-          - skeleton.docker
+      - web
 
   php:
     build: docker/php
@@ -70,7 +68,7 @@ services:
     networks:
       - web
     external_links:
-      - nginx-proxy:skeleton.docker
+      - nginx-proxy:recette-day.docker
 
   quality-assurance:
     build: docker/quality-assurance

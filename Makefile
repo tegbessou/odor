@@ -9,7 +9,7 @@ COMPOSER = $(EXEC_PHP) composer
 .DEFAULT_GOAL := help
 
 help: ## This help dialog.
-	@echo "${GREEN}Skeleton${RESET}"
+	@echo "${GREEN}RecetteDay${RESET}"
 	@awk '/^[a-zA-Z\-\_0-9]+:/ { \
 		helpMessage = match(lastLine, /^## (.*)/); \
 		if (helpMessage) { \
@@ -55,7 +55,7 @@ logs: docker-compose.override.yaml ##Logs from docker
 Project:
 
 ## Up the project and load database
-install: build up vendor node-modules db-load-fixtures
+install: build up vendor node-modules assets-build db-load-fixtures
 
 ## Reset the project
 reset: down install
@@ -98,6 +98,10 @@ wait-db:
 watch:
 	@$(EXEC_YARN) encore dev --watch
 
+##
+assets-build:
+	@$(EXEC_YARN) encore dev
+
 .PHONY: install reset start stop vendor composer-update cc wait-db node-modules
 
 #################################
@@ -106,7 +110,7 @@ Database:
 ## Load database from dump
 db-load-fixtures: wait-db
 	@echo "\nLoading fixtures from dump...\e[0m"
-	@$(EXEC_DB) "mysql --user=root --password=root < /home/app/dump/skeleton.sql"
+	@$(EXEC_DB) "mysql --user=root --password=root < /home/app/dump/odor.sql"
 
 ## Recreate database structure
 db-reload-schema: wait-db db-drop db-create db-migrate
@@ -136,7 +140,7 @@ db-reload-fixtures: wait-db db-reload-schema
 	@$(EXEC_SYMFONY) hautelook:fixtures:load --no-interaction
 
 	@echo "\nCreating dump...\e[0m"
-	@$(EXEC_DB) "mysqldump --user=root --password=root --databases skeleton > /home/app/dump/skeleton.sql"
+	@$(EXEC_DB) "mysqldump --user=root --password=root --databases odor > /home/app/dump/odor.sql"
 
 #################################
 Test:
