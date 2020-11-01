@@ -44,7 +44,7 @@ CREATE TABLE `doctrine_migration_versions` (
 
 LOCK TABLES `doctrine_migration_versions` WRITE;
 /*!40000 ALTER TABLE `doctrine_migration_versions` DISABLE KEYS */;
-INSERT INTO `doctrine_migration_versions` VALUES ('DoctrineMigrations\\Version20201020095646','2020-10-31 16:00:46',35);
+INSERT INTO `doctrine_migration_versions` VALUES ('DoctrineMigrations\\Version20201020095646','2020-11-01 14:26:46',40);
 /*!40000 ALTER TABLE `doctrine_migration_versions` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -70,7 +70,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (1,'user1@skeleton.com','a:1:{i:0;s:9:\"ROLE_USER\";}','skeleton'),(2,'user2@skeleton.com','a:1:{i:0;s:10:\"ROLE_ADMIN\";}','skeleton');
+INSERT INTO `user` VALUES (1,'user1@recette-day.docker','a:1:{i:0;s:9:\"ROLE_USER\";}','$argon2id$v=19$m=65536,t=4,p=1$bM74EZFFfAC8CpVkSoFVzQ$912iN2N6X/A2TDwuJm3P/7KyoQaWLOJw8P+9w0F4iNY'),(2,'admin@recette-day.docker','a:1:{i:0;s:10:\"ROLE_ADMIN\";}','$argon2id$v=19$m=65536,t=4,p=1$bM74EZFFfAC8CpVkSoFVzQ$912iN2N6X/A2TDwuJm3P/7KyoQaWLOJw8P+9w0F4iNY');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -83,4 +83,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-10-31 16:00:47
+-- Dump completed on 2020-11-01 14:26:48

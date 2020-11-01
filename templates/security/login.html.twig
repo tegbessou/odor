@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+                <div class="card card-signin my-5">
+                    <form method="post">
+                        <div class="card-header">
+                            <h3 class="text-center">{{ 'app.login.title'|trans }}</h3>
+                        </div>
+                        <div class="card-body">
+                            {% if error %}
+                                <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                            {% endif %}
+                            <div class="form-label-group">
+                                <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" placeholder="{{ 'app.login.email.label'|trans }}" required autofocus>
+                                <label for="inputEmail">{{ 'app.login.email.label'|trans }}</label>
+                            </div>
+                            <div class="form-label-group">
+                                <input type="password" id="inputPassword" name="password" class="form-control" placeholder="{{ 'app.login.password.label'|trans }}" required>
+                                <label for="inputPassword">{{ 'app.login.password.label'|trans }}</label>
+                            </div>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <a class="float-lg-left">{{ 'app.login.forgot_password.link'|trans }}</a>
+                                <a class="float-lg-right">{{ 'app.login.register.link'|trans }}</a>
+                            </li>
+                        </ul>
+                        <input type="hidden" name="_csrf_token"
+                               value="{{ csrf_token('authenticate') }}"
+                        >
+                        <div class="card-footer">
+                            <button type="submit" class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">{{ 'app.login.sign_in.value'|trans }}</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

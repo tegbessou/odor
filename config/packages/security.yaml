@@ -1,14 +1,23 @@
 security:
+    encoders:
+        App\Entity\User:
+            algorithm: auto
+            cost: 12
     providers:
-        users_in_memory: { memory: null }
+        users:
+            entity:
+                class: 'App\Entity\User'
+                property: 'email'
     firewalls:
-        dev:
-            pattern: ^/(_(profiler|wdt)|css|images|js)/
-            security: false
         main:
             anonymous: true
             lazy: true
-            provider: users_in_memory
+            provider: users
+            guard:
+                authenticators:
+                    - App\Security\LoginFormAuthenticator
+            logout:
+                path: app_logout
     access_control:
         # - { path: ^/admin, roles: ROLE_ADMIN }
         # - { path: ^/profile, roles: ROLE_USER }

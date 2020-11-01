@@ -1,6 +1,6 @@
 module.exports = {
     "env": {
-        "browser": true,
+        "node": true,
         "es2021": true
     },
     "extends": "eslint:recommended",
@@ -52,7 +52,6 @@ module.exports = {
         "handle-callback-err": "error",
         "id-blacklist": "error",
         "id-denylist": "error",
-        "id-length": "error",
         "id-match": "error",
         "implicit-arrow-linebreak": "error",
         "indent": "error",
