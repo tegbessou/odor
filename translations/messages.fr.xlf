@@ -6,6 +6,38 @@
                 <source>app.home.message</source>
                 <target>Bienvenue sur le squelette!</target>
             </trans-unit>
+            <trans-unit id="app.navbar.sign_in.label">
+                <source>app.navbar.sign_in.label</source>
+                <target>Me connecter</target>
+            </trans-unit>
+            <trans-unit id="app.navbar.logout.label">
+                <source>app.navbar.logout.label</source>
+                <target>Me déconnecter</target>
+            </trans-unit>
+            <trans-unit id="app.login.title">
+                <source>app.login.title</source>
+                <target>Me connecter</target>
+            </trans-unit>
+            <trans-unit id="app.login.email.label">
+                <source>app.login.email.label</source>
+                <target>Adresse mail</target>
+            </trans-unit>
+            <trans-unit id="app.login.password.label">
+                <source>app.login.password.label</source>
+                <target>Mot de passe</target>
+            </trans-unit>
+            <trans-unit id="app.login.forgot_password.link">
+                <source>app.login.forgot_password.link</source>
+                <target>Mot de passe oublié ?</target>
+            </trans-unit>
+            <trans-unit id="app.login.register.link">
+                <source>app.login.register.link</source>
+                <target>S'inscrire</target>
+            </trans-unit>
+            <trans-unit id="app.login.sign_in.value">
+                <source>app.login.sign_in.value</source>
+                <target>Me connecter</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>
