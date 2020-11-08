@@ -16,3 +16,9 @@ Feature:
     And I fill in "password" with "root"
     When I press "submit"
     Then the response should contain "Bienvenue sur le squelette!"
+
+  @javascript
+  Scenario: As a User I want to go to register page
+    Given I go to "/login"
+    When I follow "S'inscrire"
+    Then the response should contain "Créer mon compte"
