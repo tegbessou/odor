@@ -2,6 +2,10 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
     <file source-language="fr" datatype="plaintext" original="file.ext">
         <body>
+            <trans-unit id="app.home.logo.link.label">
+                <source>app.home.logo.link.label</source>
+                <target>Recette day</target>
+            </trans-unit>
             <trans-unit id="app.home.message">
                 <source>app.home.message</source>
                 <target>Bienvenue sur le squelette!</target>
@@ -37,6 +41,26 @@
             <trans-unit id="app.login.sign_in.value">
                 <source>app.login.sign_in.value</source>
                 <target>Me connecter</target>
+            </trans-unit>
+            <trans-unit id="app.register.title">
+                <source>app.register.title</source>
+                <target>Créer mon compte</target>
+            </trans-unit>
+            <trans-unit id="app.register.email.label">
+                <source>app.register.email.label</source>
+                <target>Adresse mail</target>
+            </trans-unit>
+            <trans-unit id="app.register.password_first.label">
+                <source>app.register.password_first.label</source>
+                <target>Mot de passe</target>
+            </trans-unit>
+            <trans-unit id="app.register.password_second.label">
+                <source>app.register.password_second.label</source>
+                <target>Confirmation du mot de passe</target>
+            </trans-unit>
+            <trans-unit id="app.register.submit.label">
+                <source>app.register.submit.label</source>
+                <target>Créer mon compte</target>
             </trans-unit>
         </body>
     </file>

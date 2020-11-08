@@ -1,5 +1,5 @@
 <nav class="nav">
-    <a class="nav-logo-link" href="#"><img src="{{ asset("images/logo.svg") }}" alt="RecetteDay" class="nav-logo"/></a>
+    <a class="nav-logo-link" title="{{ 'app.home.logo.link.label'|trans }}" href="{{ path('app_home') }}"><img src="{{ asset("images/logo.svg") }}" alt="RecetteDay" class="nav-logo"/></a>
     {% if app.user %}
         <a class="nav-link" href="{{ path('app_logout') }}"><i class="fas fa-user"></i> {{ 'app.navbar.logout.label'|trans }}</a>
     {% else %}

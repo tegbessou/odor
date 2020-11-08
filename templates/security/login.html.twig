@@ -25,7 +25,7 @@
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item">
                                 <a class="float-lg-left">{{ 'app.login.forgot_password.link'|trans }}</a>
-                                <a class="float-lg-right">{{ 'app.login.register.link'|trans }}</a>
+                                <a class="float-lg-right" href="{{ path('app_register') }}">{{ 'app.login.register.link'|trans }}</a>
                             </li>
                         </ul>
                         <input type="hidden" name="_csrf_token"
