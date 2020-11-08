@@ -1,4 +1,8 @@
 <nav class="nav">
     <a class="nav-logo-link" href="#"><img src="{{ asset("images/logo.svg") }}" alt="RecetteDay" class="nav-logo"/></a>
-    <a class="nav-link" href="#"><i class="fas fa-user"></i> {{ 'app.navbar.sing_in.label'|trans }}</a>
+    {% if app.user %}
+        <a class="nav-link" href="{{ path('app_logout') }}"><i class="fas fa-user"></i> {{ 'app.navbar.logout.label'|trans }}</a>
+    {% else %}
+        <a class="nav-link" href="{{ path('app_login') }}"><i class="fas fa-user"></i> {{ 'app.navbar.sign_in.label'|trans }}</a>
+    {% endif %}
 </nav>
